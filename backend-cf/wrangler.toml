@@ -1,0 +1,26 @@
+name = "njau-esports-api"
+main = "worker.js"
+compatibility_date = "2026-09-01"
+tsconfig = "tsconfig.json"
+
+# 单文件 Worker，无需打包；同时规避 esbuild 向上扫描父目录被沙箱拦截的问题
+no_bundle = true
+find_additional_modules = false
+rules = []
+
+[assets]
+directory = "../dist"
+binding = "ASSETS"
+html_handling = "none"
+not_found_handling = "404-page"
+run_worker_first = ["/api/*"]
+
+# D1 数据库：先用 `wrangler d1 create njau-esports` 创建，
+# 把返回的 database_id 填到下面。
+[[d1_databases]]
+binding = "DB"
+database_name = "njau-esports"
+database_id = "00000000-0000-0000-0000-000000000000"
+
+# 管理密钥：wrangler secret put ADMIN_KEY
+# （浏览器查看报名：Authorization: Bearer <ADMIN_KEY>）

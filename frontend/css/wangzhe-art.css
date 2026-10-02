@@ -1,0 +1,46 @@
+/* Actors stay on their original baseline. Motion lives inside each sprite. */
+.game-card--wangzhe .game-character-slot:hover { transform: none; }
+.wz-character {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 188px;
+  padding: 0;
+  border: 0;
+  border-radius: 16px;
+  background: transparent;
+  appearance: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+.wz-character:focus-visible {
+  outline: 2px dashed #bd8d24;
+  outline-offset: 7px;
+}
+.wz-character:disabled { cursor: default; }
+.wz-sprite {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+  filter: drop-shadow(0 6px 4px rgba(31,49,66,.11));
+}
+.wz-sprite image { image-rendering: pixelated; }
+.wz-sprite [data-part] { transform-box: view-box; transform-origin: 0 0; }
+.wz-expression, .wz-fx, .wz-tv-heart, .wz-star-flash { opacity: 0; }
+.wz-character:not(.is-ready) .wz-layered { display: none; }
+.wz-character.is-ready .wz-fallback { display: none; }
+.wz-character .wz-fallback {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+.wz-character.is-playing { cursor: default; }
+@media (prefers-reduced-motion: reduce) {
+  .wz-character { transition: none; }
+}

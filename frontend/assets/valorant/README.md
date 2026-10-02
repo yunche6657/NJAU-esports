@@ -1,0 +1,1 @@
+`meow-short.ogg` comes from Wikimedia Commons, [Meow.ogg](https://commons.wikimedia.org/wiki/File:Meow.ogg), by Dan Crosby. The recording is licensed under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/). `meow-cute.ogg` is a shorter, higher-pitched derivative used on the page; attribution and the same license apply.

@@ -1,0 +1,63 @@
+/* Interactive controls retain the original grid and artwork dimensions. */
+.game-card .game-character-slot.division-fx-slot {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  transition: none;
+}
+.game-card .division-fx-slot:hover,
+.game-card .division-fx-slot:active,
+.game-card .division-fx-slot.lol-kindred--clicked { transform: none; }
+.game-card.has-division-fx:hover { transform: none; }
+.game-card .division-fx-slot:focus-visible {
+  outline: 2px solid var(--gc);
+  outline-offset: 5px;
+  border-radius: 8px;
+}
+.game-card .division-fx-layer {
+  position: absolute;
+  display: block;
+  max-width: none;
+  overflow: visible;
+  pointer-events: none;
+  z-index: 2;
+  visibility: hidden;
+}
+.game-card .is-fx-active > .division-fx-layer,
+.game-card .is-fx-hint > .division-fx-layer { visibility: visible; }
+/* Keep breathing room between wide artwork throughout the mobile layout. */
+@media (max-width: 720px) {
+  .game-card--naraka .game-art-stage,
+  .game-card--overwatch .game-art-stage { gap: 16px; }
+  .game-card--naraka .game-character-slot:nth-child(1) .game-character-art {
+    transform: scale(.78);
+  }
+  .game-card--naraka .game-character-slot:nth-child(2) .game-character-art {
+    transform: scale(1.12);
+  }
+  .game-card--naraka .game-character-slot:nth-child(3) .game-character-art {
+    transform: scale(.88);
+  }
+  .game-card--overwatch.has-division-fx .game-character-slot:nth-child(1) .game-character-art {
+    width: 116%;
+    transform: translateY(1px);
+  }
+  .game-card--overwatch.has-division-fx .game-character-slot:nth-child(2) .game-character-art {
+    width: 94%;
+    transform: translateY(1px);
+  }
+  .game-card--overwatch.has-division-fx .game-character-slot:nth-child(3) .game-character-art {
+    width: 86%;
+    transform: translateY(1px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .game-card .division-fx-slot,
+  .game-card .division-fx-layer * { transition: none !important; }
+}

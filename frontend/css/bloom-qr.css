@@ -1,0 +1,38 @@
+.bloom-card { margin-top:32px; scroll-margin-top:85px; border:1px solid #dceae6; border-radius:28px; background:#fff; overflow:hidden; box-shadow:0 14px 48px #23473a08; text-align:center; }
+.bloom-copy { padding:36px 24px 0; position:relative; z-index:1; }
+.bloom-copy .kicker { font-size:10px; letter-spacing:.16em; }
+.bloom-copy h3 { margin:15px 0 8px; font-size:clamp(25px,3vw,34px); }
+.bloom-copy p { color:#789089; margin:0 0 16px; font-size:14px; }
+.bloom-group { display:inline-flex; flex-wrap:wrap; justify-content:center; gap:8px; align-items:center; color:#446b60; font-size:12px; }
+.bloom-group span { color:#008f7b; letter-spacing:.07em; }
+.bloom-stage { height:510px; width:100%; max-width:800px; margin:0 auto; position:relative; touch-action:pan-y; outline-offset:-5px; }
+.bloom-stage canvas { width:100%; height:100%; display:block; }
+@media (min-width:721px) {
+  .bloom-stage { height:clamp(300px,42svh,360px); max-width:600px; }
+  .bloom-copy { padding-top:26px; }
+  .bloom-controls { padding-bottom:22px; }
+}
+.bloom-stage:focus-visible { outline:2px solid #00bca5; border-radius:20px; }
+.bloom-fallback { position:absolute; width:260px; max-width:76%; height:auto; left:50%; top:50%; transform:translate(-50%,-50%); }
+.bloom-loading { position:absolute; bottom:30px; left:0; right:0; color:#678e80; font-size:13px; }
+.bloom-stage.is-ready .bloom-fallback,.bloom-stage.is-ready .bloom-loading { display:none; }
+.bloom-controls { padding:0 20px 28px; }
+.bloom-controls p { font-size:14px; color:#647c74; margin:0 0 16px; }
+.bloom-actions { display:flex; justify-content:center; flex-wrap:wrap; gap:10px; }
+.bloom-controls small { display:block; margin-top:17px; color:#83968f; font-size:11px; }
+.bloom-dialog { position:fixed; margin:auto; inset:0; border:0; border-radius:24px; padding:28px 22px 22px; width:min(440px,calc(100vw - 28px)); max-height:90svh; overflow:auto; text-align:center; color:#174b40; box-shadow:0 30px 100px #0003; background:white; }
+.bloom-dialog::backdrop { background:#10332988; backdrop-filter:blur(5px); }
+.bloom-dialog h3 { padding:0 20px; margin:4px 0 8px; }
+.bloom-dialog p { font-size:12px; color:#6e877e; }
+.bloom-dialog img { display:block; width:100%; height:auto; max-height:58svh; object-fit:contain; margin:12px auto; }
+.bloom-close { position:absolute; top:8px; right:12px; border:0; background:transparent; font-size:28px; color:#54746a; width:36px; height:36px; }
+.division-entry { display:flex; flex-direction:column; align-items:center; gap:12px; text-align:center; }
+.division-join { white-space:nowrap; gap:14px; }
+.division-dialog .division-dialog-note { line-height:1.8; padding:0 8px; }
+.division-group-name { display:block; font-size:13px; margin:16px 0 4px; }
+.division-dialog img { width:min(100%,290px); max-height:42svh; border-radius:12px; }
+.division-dialog .division-dialog-actions { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:10px; }
+.division-dialog [hidden] { display:none !important; }
+.division-dialog #division-group-number { margin:12px 0; letter-spacing:.06em; user-select:text; }
+@media(max-width:600px) { .bloom-copy { padding:26px 14px 0; } .bloom-stage { height:410px; } .bloom-card { border-radius:22px; } }
+@media(prefers-reduced-motion:reduce) { .bloom-card * { scroll-behavior:auto; } }

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07172c">
+  <meta name="description" content="南农电竞社活动时间轴，回看 2024 年 9 月至 2026 年 6 月的社团时光。">
+  <title>历史活动时间轴 · NJAU 电竞社</title>
+  <link id="archiveBackgroundPreload" as="image">
+  <link rel="stylesheet" href="css/activities.css?v=20261002-current-v14">
+  <script src="js/activities-data.js?v=20261002-prelaunch" defer></script>
+  <script src="js/activities.js?v=20261002-current-v14" defer></script>
+</head>
+<body class="archive-page">
+  <a class="skip-timeline" href="#archiveViewport">跳到时间轴</a>
+  <main class="archive-scroll" id="archiveScroll">
+    <div class="archive-scene" id="archiveScene">
+      <div class="archive-backdrop" aria-hidden="true"></div>
+      <div class="archive-shade" aria-hidden="true"></div>
+      <header class="archive-header">
+        <a class="archive-back" href="index.html?from=activities#events"><span aria-hidden="true">←</span> 返回活动入口</a>
+        <a class="archive-brand" href="index.html?from=activities#events"><img src="assets/logo-nav.jpg" width="32" height="32" alt=""><span>NJAU <b>电竞社</b></span></a>
+        <a class="archive-switch" id="archiveSwitch" href="activities.html?view=current" aria-label="前往当期活动">
+          <span class="archive-switch__icon" aria-hidden="true">☀️</span>
+          <span class="archive-switch__text" id="archiveSwitchText">前往当期活动</span>
+          <span class="archive-switch__arrow" aria-hidden="true">↗</span>
+        </a>
+      </header>
+      <div class="archive-composition">
+        <section class="archive-intro" aria-labelledby="archiveTitle">
+          <span class="archive-eyebrow" id="archiveEyebrow">回到，那些闪光的日子</span>
+          <h1 id="archiveTitle">一起上场的<br><em>那些日子。</em></h1>
+          <p class="archive-range" id="archiveRange">2024.09 <span>—</span> 2026.06</p>
+          <p class="archive-description" id="archiveDescription">从第一次相遇，到下一次并肩。<br>沿着时间，重温我们的社团记忆。</p>
+          <span class="archive-caption" id="archiveCaption">历史活动</span>
+        </section>
+        <div class="archive-viewport" id="archiveViewport" role="region" aria-label="活动时间轴" tabindex="0">
+          <ol class="archive-track" id="archiveTrack">
+            <li class="archive-loading">正在打开活动档案…</li>
+          </ol>
+        </div>
+      </div>
+      <footer class="archive-footer">
+        <span class="archive-scroll-hint"><span aria-hidden="true">↓</span><span id="archiveScrollHint">向下滚动，沿时间前行</span></span>
+        <nav class="archive-years" id="archiveYears" aria-label="跳到年份"></nav>
+        <a class="archive-footer-bridge" id="archiveFooterBridge" href="activities.html?view=current">当期活动 ↗</a>
+        <div class="archive-arrows"><button id="archivePrev" type="button" aria-label="前一个时间节点">←</button><button id="archiveNext" type="button" aria-label="后一个时间节点">→</button></div>
+      </footer>
+      <div class="archive-progress" aria-hidden="true"><span id="archiveProgress"></span></div>
+      <p class="archive-status" id="archiveStatus" aria-live="polite"></p>
+    </div>
+  </main>
+  <dialog class="activity-detail" id="activityDetail" aria-labelledby="activityDetailTitle">
+    <button class="activity-detail__close" id="activityDetailClose" type="button" aria-label="关闭活动详情">×</button>
+    <p class="activity-detail__date" id="activityDetailDate"></p>
+    <h2 id="activityDetailTitle"></h2>
+    <div class="activity-matchup" id="activityDetailMatchup" hidden></div>
+    <figure class="activity-detail__media" id="activityDetailMedia" hidden>
+      <a id="activityDetailOriginal" target="_blank" rel="noopener" aria-label="打开活动图片原图"><img id="activityDetailImage" alt=""></a>
+      <figcaption><span id="activityDetailCaption"></span><a id="activityDetailImageLink" target="_blank" rel="noopener">查看原图 ↗</a></figcaption>
+    </figure>
+    <nav class="activity-gallery" id="activityDetailGallery" aria-label="活动图片" hidden></nav>
+    <div class="activity-detail__actions" id="activityDetailActions" hidden></div>
+    <p class="activity-detail__copy" id="activityDetailCopy"></p>
+  </dialog>
+  <noscript><div class="archive-noscript">请启用 JavaScript 以浏览活动时间轴。<a href="index.html#events">返回活动入口</a></div></noscript>
+</body>
+</html>

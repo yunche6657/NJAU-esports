@@ -1,0 +1,89 @@
+/* Original character sizes and image transforms stay in sections.css. */
+.game-card--overwatch .division-fx-slot:hover { transform: none; }
+.game-card--overwatch .owf-genji-hint,
+.game-card--overwatch .owf-genji-slash,
+.game-card--overwatch .owf-genji-pixels,
+.game-card--overwatch .owf-aim,
+.game-card--overwatch .owf-muzzle,
+.game-card--overwatch .owf-shot-pixels,
+.game-card--overwatch .owf-reload,
+.game-card--overwatch .owf-energy-hint,
+.game-card--overwatch .owf-device,
+.game-card--overwatch .owf-pulse,
+.game-card--overwatch .owf-energy-wave,
+.game-card--overwatch .owf-energy-pixels { opacity: 0; pointer-events: none; }
+
+.game-card--overwatch .is-fx-hint:not(.is-fx-active) .owf-genji-hint { animation: owf-hint-window 700ms linear both; }
+.game-card--overwatch .owf-blade-charge { stroke-dasharray: 16 84; stroke-dashoffset: 16; }
+.game-card--overwatch .is-fx-hint:not(.is-fx-active) .owf-blade-charge { animation: owf-charge 650ms linear both; }
+.game-card--overwatch .is-fx-active .owf-genji-slash { animation: owf-slash-window 550ms linear both; }
+.game-card--overwatch .owf-blade-trail,
+.game-card--overwatch .owf-blade-core,
+.game-card--overwatch .owf-blade-echo { stroke-dasharray: 100; stroke-dashoffset: 100; }
+.game-card--overwatch .owf-blade-trail { opacity: .64; }
+.game-card--overwatch .owf-blade-echo { opacity: .55; }
+.game-card--overwatch .is-fx-active .owf-blade-trail { animation: owf-slash-draw 400ms cubic-bezier(.12,.7,.2,1) both; }
+.game-card--overwatch .is-fx-active .owf-blade-core { animation: owf-slash-draw 340ms 28ms cubic-bezier(.12,.7,.2,1) both; }
+.game-card--overwatch .is-fx-active .owf-blade-echo { animation: owf-slash-draw 400ms 55ms cubic-bezier(.12,.7,.2,1) both; }
+.game-card--overwatch .is-fx-active .owf-genji-pixels { animation: owf-blade-pixels 440ms 60ms steps(5,end) both; }
+
+.game-card--overwatch .is-fx-hint:not(.is-fx-active) .owf-aim { animation: owf-aim-hint 600ms steps(4,end) both; }
+.game-card--overwatch .is-fx-active[data-fx-index="1"] { animation: owf-recoil 180ms steps(3,end); }
+.game-card--overwatch .is-fx-active .owf-muzzle { animation: owf-muzzle-flash 140ms steps(1,end) both; }
+.game-card--overwatch .is-fx-active .owf-shot-pixels { animation: owf-shot-sparks 280ms steps(4,end) both; }
+.game-card--overwatch .is-fx-active.owf-reloading .owf-reload { animation: owf-reload-window 980ms 180ms both; }
+.game-card--overwatch .owf-cylinder { transform-box: fill-box; transform-origin: center; }
+.game-card--overwatch .is-fx-active.owf-reloading .owf-cylinder { animation: owf-cylinder-turn 840ms 240ms steps(6,end) both; }
+.game-card--overwatch .is-fx-active.owf-reloading .owf-chamber { animation: owf-chamber-load 100ms both; }
+.game-card--overwatch .is-fx-active.owf-reloading .owf-chamber-1 { animation-delay: 240ms; }
+.game-card--overwatch .is-fx-active.owf-reloading .owf-chamber-2 { animation-delay: 380ms; }
+.game-card--overwatch .is-fx-active.owf-reloading .owf-chamber-3 { animation-delay: 520ms; }
+.game-card--overwatch .is-fx-active.owf-reloading .owf-chamber-4 { animation-delay: 660ms; }
+.game-card--overwatch .is-fx-active.owf-reloading .owf-chamber-5 { animation-delay: 800ms; }
+.game-card--overwatch .is-fx-active.owf-reloading .owf-chamber-6 { animation-delay: 940ms; }
+
+.game-card--overwatch .is-fx-hint:not(.is-fx-active) .owf-energy-hint { animation: owf-hint-window 850ms linear both; }
+.game-card--overwatch .owf-energy-flow { stroke-dasharray: 12 88; stroke-dashoffset: 12; }
+.game-card--overwatch .is-fx-hint:not(.is-fx-active) .owf-energy-flow { animation: owf-charge 750ms linear both; }
+.game-card--overwatch .is-fx-hint:not(.is-fx-active) .owf-flow-right { animation-delay: 65ms; }
+.game-card--overwatch .is-fx-active .owf-device-left { animation: owf-device-charge 260ms steps(4,end) both; }
+.game-card--overwatch .is-fx-active .owf-device-right { animation: owf-device-charge 260ms 160ms steps(4,end) both; }
+.game-card--overwatch .owf-pulse { stroke-dasharray: 22 78; stroke-dashoffset: 22; }
+.game-card--overwatch .is-fx-active .owf-pulse-one { animation: owf-pulse-fire 300ms 90ms linear both; }
+.game-card--overwatch .is-fx-active .owf-pulse-two { animation: owf-pulse-fire 300ms 250ms linear both; }
+.game-card--overwatch .is-fx-active .owf-pulse-three { animation: owf-pulse-fire 300ms 400ms linear both; }
+.game-card--overwatch .owf-energy-wave { transform-box: fill-box; transform-origin: center; }
+.game-card--overwatch .is-fx-active .owf-energy-wave { animation: owf-wave-expand 450ms 420ms steps(7,end) both; }
+.game-card--overwatch .is-fx-active .owf-energy-pixels { animation: owf-energy-sparkle 630ms 150ms steps(5,end) both; }
+
+@keyframes owf-hint-window { 0%,100% { opacity: 0; } 8%,86% { opacity: .9; } }
+@keyframes owf-charge { from { stroke-dashoffset: 16; } to { stroke-dashoffset: -100; } }
+@keyframes owf-slash-window { 0% { opacity: 0; } 8%,53% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes owf-slash-draw { 0% { stroke-dashoffset: 100; } 58%,100% { stroke-dashoffset: 0; } }
+@keyframes owf-blade-pixels { 0% { opacity: 0; transform: translate(0,0); } 20%,55% { opacity: 1; } 100% { opacity: 0; transform: translate(-40px,-27px); } }
+@keyframes owf-aim-hint { 0%,100% { opacity: 0; } 18%,72% { opacity: .7; } }
+@keyframes owf-recoil { 0%,100% { translate: 0 0; } 25%,55% { translate: 2px 0; } }
+@keyframes owf-muzzle-flash { 0% { opacity: 1; } 45% { opacity: .45; } 75%,100% { opacity: 0; } }
+@keyframes owf-shot-sparks { 0% { opacity: 0; transform: translate(0,0); } 14%,45% { opacity: 1; } 100% { opacity: 0; transform: translate(-14px,-13px); } }
+@keyframes owf-reload-window { 0%,100% { opacity: 0; } 8%,86% { opacity: .96; } }
+@keyframes owf-cylinder-turn { from { transform: rotate(0); } to { transform: rotate(360deg); } }
+@keyframes owf-chamber-load { from { fill: #5d493a; } to { fill: #efba5d; } }
+@keyframes owf-device-charge { 0%,100% { opacity: 0; } 20%,72% { opacity: 1; } }
+@keyframes owf-pulse-fire { 0% { opacity: 0; stroke-dashoffset: 22; } 12% { opacity: .95; } 70% { opacity: .95; } 100% { opacity: 0; stroke-dashoffset: -100; } }
+@keyframes owf-wave-expand { 0% { opacity: 0; transform: scale(.25); } 22% { opacity: .75; } 100% { opacity: 0; transform: scale(1.1); } }
+@keyframes owf-energy-sparkle { 0%,100% { opacity: 0; } 22%,55% { opacity: .95; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .game-card--overwatch .division-fx-slot,
+  .game-card--overwatch .division-fx-layer * { animation: none !important; }
+  .game-card--overwatch .is-fx-active .owf-genji-slash,
+  .game-card--overwatch .is-fx-active .owf-muzzle,
+  .game-card--overwatch .is-fx-active .owf-device,
+  .game-card--overwatch .is-fx-hint:not(.is-fx-active) .owf-aim { opacity: .75; }
+  .game-card--overwatch .is-fx-active .owf-blade-core { stroke-dashoffset: 0; }
+  .game-card--overwatch .is-fx-hint:not(.is-fx-active) .owf-genji-hint,
+  .game-card--overwatch .is-fx-hint:not(.is-fx-active) .owf-energy-hint { opacity: .65; }
+  .game-card--overwatch .is-fx-hint:not(.is-fx-active) .owf-blade-charge,
+  .game-card--overwatch .is-fx-hint:not(.is-fx-active) .owf-energy-flow { stroke-dashoffset: 0; }
+  .game-card--overwatch .is-fx-active.owf-reloading .owf-reload { opacity: .9; }
+}

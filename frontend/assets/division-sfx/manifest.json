@@ -1,0 +1,110 @@
+{
+  "origin": "Mixed: four edited CC0 audio cues with sources below; other cues retain original procedural synthesis. No official game audio.",
+  "sampleRate": 24000,
+  "sounds": {
+    "petals": {
+      "seconds": 0.62,
+      "peak": 0.554,
+      "rms": 0.095
+    },
+    "parry": {
+      "seconds": 0.86,
+      "peak": 0.72,
+      "rms": 0.069,
+      "sourcePages": [
+        "https://opengameart.org/content/37-hitspunches",
+        "https://opengameart.org/content/swishes-sound-pack",
+        "https://opengameart.org/content/20-sword-sound-effects-attacks-and-clashes"
+      ],
+      "authors": [
+        "Independent.nu / qubodup",
+        "artisticdude",
+        "StarNinjas"
+      ],
+      "license": "CC0",
+      "description": "Recorded swish, physical impact and short metal clash; impact aligned to 220 ms"
+    },
+    "sigil": {
+      "seconds": 0.76,
+      "peak": 0.458,
+      "rms": 0.095
+    },
+    "butterfly": {
+      "seconds": 0.64,
+      "peak": 0.513,
+      "rms": 0.095
+    },
+    "shutter": {
+      "seconds": 0.8448,
+      "peak": 0.72,
+      "rms": 0.044,
+      "sourcePages": [
+        "https://opengameart.org/content/camera"
+      ],
+      "authors": [
+        "themightyglider"
+      ],
+      "license": "CC0",
+      "description": "Recorded mechanical camera shutter; opening and return preserved"
+    },
+    "blossom": {
+      "seconds": 0.72,
+      "peak": 0.469,
+      "rms": 0.095
+    },
+    "blade": {
+      "seconds": 0.53,
+      "peak": 0.68,
+      "rms": 0.068,
+      "sourcePages": [
+        "https://opengameart.org/content/20-sword-sound-effects-attacks-and-clashes",
+        "https://opengameart.org/content/swishes-sound-pack"
+      ],
+      "authors": [
+        "StarNinjas",
+        "artisticdude"
+      ],
+      "license": "CC0",
+      "reference": "https://overwatch.blizzard.com/en-us/heroes/genji/",
+      "description": "Recorded blade swish, edited for the Genji slash; NOT an official Overwatch sound"
+    },
+    "shot": {
+      "seconds": 0.3,
+      "peak": 0.68,
+      "rms": 0.071
+    },
+    "shot-reload": {
+      "seconds": 1.05,
+      "peak": 0.68,
+      "rms": 0.03
+    },
+    "energy": {
+      "seconds": 0.72,
+      "peak": 0.573,
+      "rms": 0.095
+    },
+    "spirit": {
+      "seconds": 0.1353,
+      "peak": 0.22,
+      "rms": 0.051,
+      "sourcePages": [
+        "https://opengameart.org/content/swishes-sound-pack"
+      ],
+      "authors": [
+        "artisticdude"
+      ],
+      "license": "CC0",
+      "description": "Quiet short natural swish for expression switching; no musical notes, pitch shifting, reverb or magic tail"
+    },
+    "snip": {
+      "seconds": 0.56,
+      "peak": 0.68,
+      "rms": 0.028
+    },
+    "wind": {
+      "seconds": 0.78,
+      "peak": 0.587,
+      "rms": 0.095
+    }
+  }
+}

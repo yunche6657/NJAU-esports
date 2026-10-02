@@ -1,0 +1,11 @@
+{
+  "name": "njau-esports-site",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "npm --prefix backend-cf test",
+    "check:deploy": "npm run build && npm --prefix backend-cf run check:deploy"
+  }
+}

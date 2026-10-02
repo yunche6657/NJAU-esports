@@ -1,0 +1,127 @@
+/* Effects sit above intact Naraka PNGs; no character transforms or cut-outs. */
+.game-card--naraka .nf-hint,
+.game-card--naraka .nf-click { opacity: 0; pointer-events: none; }
+.game-card--naraka .is-fx-hint .nf-hint,
+.game-card--naraka .is-fx-active .nf-click { opacity: 1; }
+.game-card--naraka .is-fx-active .nf-hint { opacity: 0; }
+.game-card--naraka .nf-jewel { color: #fff3b0; }
+.game-card--naraka .nf-seal { transform-box: fill-box; transform-origin: center; }
+
+.game-card--naraka .is-fx-hint .nf-lens,
+.game-card--naraka .is-fx-hint .nf-weapon-hint {
+  stroke-dasharray: 25 100;
+  animation: nf-edge-sweep 550ms ease-out both;
+}
+.game-card--naraka .is-fx-hint .nf-lens-b { animation-delay: 80ms; }
+.game-card--naraka .is-fx-hint .nf-jewel {
+  animation: nf-jewel-twinkle 330ms steps(5, end) var(--nf-delay) both;
+}
+.game-card--naraka .is-fx-active .nf-petal {
+  animation: nf-petal-orbit 1000ms ease-out var(--nf-delay) both;
+}
+.game-card--naraka .is-fx-active .nf-flower-spark {
+  animation: nf-jewel-twinkle 400ms steps(5, end) both;
+}
+.game-card--naraka .is-fx-active .nf-attack {
+  stroke-dasharray: 100;
+  animation: nf-attack-cut 520ms cubic-bezier(.18,.78,.23,1) both;
+}
+.game-card--naraka .is-fx-active .nf-attack-halo { stroke-opacity: .55; }
+.game-card--naraka .is-fx-active .nf-parry {
+  stroke-dasharray: 100;
+  animation: nf-parry-arc 600ms cubic-bezier(.12,.75,.22,1) 160ms both;
+}
+.game-card--naraka .is-fx-active .nf-parry-halo { stroke-opacity: .48; }
+.game-card--naraka .is-fx-active .nf-impact {
+  animation: nf-impact-flash 310ms steps(4, end) 220ms both;
+}
+.game-card--naraka .is-fx-active .nf-ember {
+  animation: nf-ember-fly 470ms ease-out calc(240ms + var(--nf-delay)) both;
+}
+.game-card--naraka .is-fx-active .nf-seal {
+  animation: nf-seal-open 1380ms ease-out both;
+}
+.game-card--naraka .is-fx-active .nf-talisman {
+  animation: nf-gold-rise 1050ms ease-out var(--nf-delay) both;
+}
+.game-card--naraka .is-fx-active .nf-crown-spark {
+  animation: nf-jewel-twinkle 360ms steps(5, end) 1000ms both;
+}
+
+@keyframes nf-edge-sweep {
+  0% { stroke-dashoffset: 30; opacity: 0; }
+  15% { opacity: .94; }
+  75% { opacity: .85; }
+  100% { stroke-dashoffset: -103; opacity: 0; }
+}
+@keyframes nf-jewel-twinkle {
+  0%, 100% { opacity: 0; transform: scale(.4); }
+  30% { opacity: 1; transform: scale(1); }
+  65% { opacity: .8; transform: scale(.72); }
+}
+@keyframes nf-petal-orbit {
+  0% { opacity: 0; transform: translate(0,0) rotate(0deg); }
+  10% { opacity: 1; }
+  48% { opacity: 1; transform: translate(var(--nf-mx),var(--nf-my)) rotate(80deg); }
+  80% { opacity: .8; }
+  100% { opacity: 0; transform: translate(var(--nf-ex),var(--nf-ey)) rotate(var(--nf-turn)); }
+}
+@keyframes nf-attack-cut {
+  0% { opacity: 0; stroke-dashoffset: 100; }
+  9% { opacity: 1; }
+  43%, 58% { opacity: 1; stroke-dashoffset: 0; }
+  100% { opacity: 0; stroke-dashoffset: -90; }
+}
+@keyframes nf-parry-arc {
+  0% { opacity: 0; stroke-dashoffset: 100; }
+  10% { opacity: 1; }
+  38%, 56% { opacity: 1; stroke-dashoffset: 0; }
+  100% { opacity: 0; stroke-dashoffset: -100; }
+}
+@keyframes nf-impact-flash {
+  0% { opacity: 0; transform: scale(.35); }
+  25%, 45% { opacity: 1; transform: scale(1.4); }
+  100% { opacity: 0; transform: scale(.6); }
+}
+@keyframes nf-ember-fly {
+  0% { opacity: 0; transform: translate(0,0); }
+  15% { opacity: 1; }
+  65% { opacity: .9; }
+  100% { opacity: 0; transform: translate(var(--nf-dx),var(--nf-dy)); }
+}
+@keyframes nf-seal-open {
+  0% { opacity: 0; transform: scaleX(.45); }
+  22% { opacity: .88; transform: scaleX(1); }
+  72% { opacity: .65; }
+  100% { opacity: 0; transform: scaleX(1.05); }
+}
+@keyframes nf-gold-rise {
+  0% { opacity: 0; transform: translate(0,0); }
+  18% { opacity: .95; }
+  65% { opacity: .8; }
+  100% { opacity: 0; transform: translate(var(--nf-dx),var(--nf-dy)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .game-card--naraka .is-fx-hint .nf-hint > *,
+  .game-card--naraka .is-fx-hint .nf-jewel,
+  .game-card--naraka .is-fx-active .nf-click *,
+  .game-card--naraka .is-fx-active .nf-click {
+    animation: none !important;
+  }
+  .game-card--naraka .is-fx-hint .nf-hint,
+  .game-card--naraka .is-fx-active .nf-click {
+    animation: nf-reduced-feedback 360ms linear both !important;
+  }
+  .game-card--naraka .is-fx-hint .nf-lens,
+  .game-card--naraka .is-fx-hint .nf-weapon-hint,
+  .game-card--naraka .is-fx-active .nf-attack,
+  .game-card--naraka .is-fx-active .nf-parry { stroke-dasharray: none; }
+  .game-card--naraka .is-fx-active .nf-petal,
+  .game-card--naraka .is-fx-active .nf-ember,
+  .game-card--naraka .is-fx-active .nf-talisman { visibility: hidden; }
+}
+@keyframes nf-reduced-feedback {
+  0%, 80% { opacity: .8; }
+  100% { opacity: 0; }
+}

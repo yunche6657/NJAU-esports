@@ -1,0 +1,161 @@
+/* The source sprites stay intact; only storybook accents move. */
+.game-card--identityv .is-fx-hint .ivf-camera-focus { animation: ivf-camera-focus 750ms ease-out both; }
+.game-card--identityv .is-fx-active .ivf-camera-focus { animation: ivf-camera-focus 900ms ease-out both; }
+.game-card--identityv .is-fx-active .ivf-camera-flash { animation: ivf-camera-flash 420ms linear both; }
+.game-card--identityv .is-fx-active .ivf-camera-ring { animation: ivf-camera-ring 600ms ease-out both; }
+@keyframes ivf-camera-focus { 0%,100% { opacity:0; } 15%,72% { opacity:.8; } }
+@keyframes ivf-camera-flash { 0% { opacity:0; } 8%,22% { opacity:.95; } 70%,100% { opacity:0; } }
+@keyframes ivf-camera-ring { 0% { opacity:0; r:35; } 12% { opacity:.65; } 100% { opacity:0; r:87; } }
+.game-card--identityv .ivf-bit { opacity: 0; }
+.game-card--identityv .division-fx-layer { overflow: visible; }
+.game-card--identityv .ivf-spark,
+.game-card--identityv .ivf-flower,
+.game-card--identityv .ivf-leaf,
+.game-card--identityv .ivf-petal {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.game-card--identityv .ivf-wing { transform-box: fill-box; }
+.game-card--identityv .ivf-wing-left { transform-origin: right center; }
+.game-card--identityv .ivf-wing-right { transform-origin: left center; }
+
+.game-card--identityv .is-fx-hint .ivf-hat-butterfly {
+  animation: ivf-hat-perch 740ms ease-out both;
+}
+.game-card--identityv .is-fx-hint .ivf-wing {
+  animation: ivf-flutter 170ms ease-in-out 4 alternate;
+}
+.game-card--identityv .is-fx-hint .ivf-hat-star,
+.game-card--identityv .is-fx-hint .ivf-book-star,
+.game-card--identityv .is-fx-hint .ivf-hair-star {
+  animation: ivf-twinkle 520ms steps(6, end) var(--ivf-delay, 0ms) both;
+}
+.game-card--identityv .is-fx-hint .ivf-book-edge {
+  animation: ivf-book-light 800ms ease-in-out both;
+}
+.game-card--identityv .is-fx-hint .ivf-glyph {
+  animation: ivf-glyph-rise 660ms ease-out var(--ivf-delay, 0ms) both;
+  animation-delay: calc(var(--ivf-delay, 0ms) * .3);
+}
+
+.game-card--identityv .is-fx-active .ivf-hat-butterfly {
+  animation: ivf-hat-orbit 1570ms linear both;
+}
+.game-card--identityv .is-fx-active .ivf-wing {
+  animation: ivf-flutter 120ms ease-in-out 13 alternate;
+}
+.game-card--identityv .is-fx-active .ivf-leaf {
+  animation: ivf-leaf-drift 760ms ease-out var(--ivf-delay, 0ms) both;
+}
+.game-card--identityv .is-fx-active .ivf-spark {
+  animation: ivf-twinkle 580ms steps(7, end) var(--ivf-delay, 0ms) both;
+}
+.game-card--identityv .is-fx-active .ivf-book-edge {
+  animation: ivf-book-light 1300ms ease-in-out both;
+}
+.game-card--identityv .is-fx-active .ivf-page {
+  transform-box: view-box;
+  transform-origin: 0 0;
+  animation: ivf-page-turn 1320ms ease-in-out both;
+}
+.game-card--identityv .is-fx-active .ivf-glyph {
+  animation: ivf-glyph-rise 850ms ease-out var(--ivf-delay, 0ms) both;
+}
+.game-card--identityv .is-fx-active .ivf-flower {
+  animation: ivf-flower-open 1150ms steps(9, end) var(--ivf-delay, 0ms) both;
+}
+.game-card--identityv .is-fx-active .ivf-petal {
+  animation: ivf-petal-fall 1010ms ease-in-out var(--ivf-delay, 0ms) both;
+}
+.game-card--identityv .is-fx-active .ivf-braid-butterfly {
+  animation: ivf-braid-flight 1640ms ease-in-out 70ms both;
+}
+
+@keyframes ivf-hat-perch {
+  0%, 100% { opacity: 0; transform: translateY(0); }
+  20%, 80% { opacity: 1; transform: translateY(-10px); }
+}
+@keyframes ivf-flutter {
+  from { transform: scaleX(1); }
+  to { transform: scaleX(.28); }
+}
+@keyframes ivf-hat-orbit {
+  0% { opacity: 0; transform: translate(0, 0) rotate(-12deg); }
+  9% { opacity: 1; transform: translate(-5px, -20px) rotate(-18deg); }
+  26% { opacity: 1; transform: translate(-145px, -98px) rotate(-22deg); }
+  43% { opacity: 1; transform: translate(-362px, -120px) rotate(-5deg); }
+  60% { opacity: 1; transform: translate(-552px, 67px) rotate(24deg); }
+  76% { opacity: 1; transform: translate(-302px, 9px) rotate(13deg); }
+  90% { opacity: 1; transform: translate(-35px, -3px) rotate(2deg); }
+  95% { opacity: 1; transform: translate(0, 0) rotate(0); }
+  100% { opacity: 0; transform: translate(0, 0) rotate(0); }
+}
+@keyframes ivf-leaf-drift {
+  0% { opacity: 0; transform: translate(0, 0) rotate(0) scale(.55); }
+  18% { opacity: .95; }
+  65% { opacity: .8; }
+  100% { opacity: 0; transform: translate(var(--ivf-dx), var(--ivf-dy)) rotate(var(--ivf-turn)) scale(.7); }
+}
+@keyframes ivf-twinkle {
+  0%, 100% { opacity: 0; transform: scale(.35); }
+  27% { opacity: 1; transform: scale(1); }
+  54% { opacity: .75; transform: scale(.62); }
+  75% { opacity: .95; transform: scale(.86); }
+}
+@keyframes ivf-book-light {
+  0%, 100% { opacity: 0; }
+  25%, 65% { opacity: .75; }
+}
+@keyframes ivf-page-turn {
+  0% { opacity: 0; transform: scaleX(1) skewY(0); }
+  12% { opacity: .8; transform: scaleX(.97) skewY(-4deg); }
+  46% { opacity: .94; transform: scaleX(.48) skewY(-25deg); }
+  59% { opacity: .92; transform: scaleX(.18) skewY(-30deg); }
+  78% { opacity: .8; transform: scaleX(.68) skewY(-12deg); }
+  92% { opacity: .5; transform: scaleX(1) skewY(0); }
+  100% { opacity: 0; transform: scaleX(1) skewY(0); }
+}
+@keyframes ivf-glyph-rise {
+  0% { opacity: 0; transform: translate(0, 0); }
+  22% { opacity: .88; }
+  68% { opacity: .7; }
+  100% { opacity: 0; transform: translate(var(--ivf-dx, 15px), -120px); }
+}
+@keyframes ivf-flower-open {
+  0% { opacity: 0; transform: scale(.12) rotate(-24deg); }
+  24% { opacity: 1; transform: scale(1.08) rotate(0); }
+  45%, 64% { opacity: 1; transform: scale(.96) rotate(6deg); }
+  100% { opacity: 0; transform: scale(.74) rotate(12deg); }
+}
+@keyframes ivf-petal-fall {
+  0% { opacity: 0; transform: translate(0, 0) rotate(0); }
+  18% { opacity: 1; }
+  70% { opacity: .85; }
+  100% { opacity: 0; transform: translate(var(--ivf-dx), var(--ivf-dy)) rotate(var(--ivf-turn)); }
+}
+@keyframes ivf-braid-flight {
+  0% { opacity: 0; transform: translate(0, 0) rotate(-15deg) scale(.8); }
+  12% { opacity: 1; transform: translate(54px, -35px) rotate(-20deg) scale(.8); }
+  37% { opacity: 1; transform: translate(141px, -153px) rotate(-24deg) scale(.8); }
+  63% { opacity: 1; transform: translate(233px, -304px) rotate(-5deg) scale(.8); }
+  80% { opacity: 1; transform: translate(190px, -398px) rotate(-30deg) scale(.8); }
+  100% { opacity: 0; transform: translate(101px, -429px) rotate(-35deg) scale(.65); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .game-card--identityv .is-fx-hint .ivf-bit,
+  .game-card--identityv .is-fx-active .ivf-bit,
+  .game-card--identityv .is-fx-hint .ivf-wing,
+  .game-card--identityv .is-fx-active .ivf-wing {
+    animation: none !important;
+    transform: none !important;
+    opacity: 0;
+  }
+  .game-card--identityv .is-fx-active .ivf-camera-reduced,
+  .game-card--identityv .is-fx-hint .ivf-reduced,
+  .game-card--identityv .is-fx-active .ivf-reduced,
+  .game-card--identityv .is-fx-hint .ivf-reduced .ivf-wing,
+  .game-card--identityv .is-fx-active .ivf-reduced .ivf-wing {
+    opacity: .85;
+  }
+}

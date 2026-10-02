@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="no-scroll">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="theme-color" content="#00c2a8">
+  <meta name="description" content="南京农业大学电竞社官方网站 · 八大游戏分部 · 赛事活动 · 招新加入，在南农找到一起上场的队友。">
+  <title>NJAU 电竞社 · NJAU E-Sports Club</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css?v=20260927-v2">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css?v=20261002-honors-v3">
+  <link rel="stylesheet" href="css/wangzhe-art.css?v=20260926-v13">
+  <link rel="stylesheet" href="css/bloom-qr.css?v=20261001-responsive-v2">
+  <link rel="stylesheet" href="css/division-fx.css?v=20261001-responsive-v2">
+  <link rel="stylesheet" href="css/naraka-interactions.css?v=20261001-v1">
+  <link rel="stylesheet" href="css/identityv-interactions.css?v=20261001-camera-v1">
+  <link rel="stylesheet" href="css/overwatch-interactions.css?v=20261001-v1">
+  <link rel="stylesheet" href="css/lol-interactions.css?v=20261001-v1">
+  <link rel="stylesheet" href="css/activities-entry.css?v=20261002-current-v12">
+  <noscript>
+    <style>
+      html.no-scroll { overflow: auto; }
+      #intro { display: none; }
+    </style>
+  </noscript>
+</head>
+<body>
+
+  <!-- 像素符号库（点缀用） -->
+  <svg style="display:none" aria-hidden="true">
+    <symbol id="pix-star" viewBox="0 0 7 7"><path fill="currentColor" d="M3 0h1v1h-1z M2 1h3v1h-3z M1 2h5v1h-5z M0 3h7v1h-7z M1 4h5v1h-5z M2 5h3v1h-3z M3 6h1v1h-1z"/></symbol>
+    <symbol id="pix-heart" viewBox="0 0 7 6"><path fill="currentColor" d="M1 0h2v1h-2z M4 0h2v1h-2z M0 1h7v1h-7z M0 2h7v1h-7z M1 3h5v1h-5z M2 4h3v1h-3z M3 5h1v1h-1z"/></symbol>
+    <symbol id="pix-cloud" viewBox="0 0 10 6"><path fill="currentColor" d="M3 1h4v1h-4z M2 2h6v1h-6z M1 3h8v1h-8z M0 4h10v1h-10z M2 5h6v1h-6z"/></symbol>
+    <symbol id="pix-qr" viewBox="0 0 8 8"><path fill="currentColor" d="M0 0h3v1h-3z M5 0h3v1h-3z M0 1h1v1h-1z M2 1h1v1h-1z M5 1h1v1h-1z M7 1h1v1h-1z M0 2h3v1h-3z M5 2h3v1h-3z M3 3h2v1h-2z M0 4h1v1h-1z M4 4h1v1h-1z M6 4h1v1h-1z M0 5h3v1h-3z M5 5h1v1h-1z M7 5h1v1h-1z M0 6h1v1h-1z M2 6h1v1h-1z M4 6h1v1h-1z M6 6h1v1h-1z M0 7h3v1h-3z M5 7h2v1h-2z"/></symbol>
+    <symbol id="pix-trophy" viewBox="0 0 8 8"><path fill="currentColor" d="M1 0h6v1h-6z M0 1h8v1h-8z M0 2h8v1h-8z M1 3h6v1h-6z M2 4h4v1h-4z M3 5h2v1h-2z M2 6h4v1h-4z M1 7h6v1h-6z"/></symbol>
+    <symbol id="pix-mail" viewBox="0 0 8 6"><path fill="currentColor" d="M0 0h8v1h-8z M0 1h2v1h-2z M6 1h2v1h-2z M0 2h1v1h-1z M2 2h1v1h-1z M5 2h1v1h-1z M7 2h1v1h-1z M0 3h1v1h-1z M3 3h2v1h-2z M7 3h1v1h-1z M0 4h1v1h-1z M7 4h1v1h-1z M0 5h8v1h-8z"/></symbol>
+    <symbol id="pix-burger" viewBox="0 0 8 8"><path fill="currentColor" d="M0 1h8v1h-8z M0 3h8v1h-8z M0 5h8v1h-8z"/></symbol>
+  </svg>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ============ 1. 开场：3D 粒子 logo（全屏 overlay） ============ -->
+  <div id="intro" class="intro" aria-label="开场 3D 粒子 logo">
+    <div id="opening-animation"></div>
+    <img id="introFallback" class="intro-fallback" src="assets/logo-bird-glow.png" alt="NJAU 电竞社 · 玄鸟 logo" hidden>
+    <svg class="pix pix-deco pix-float" style="top:14%;left:12%;width:26px;height:26px;color:var(--c-lemon)"><use href="#pix-star"/></svg>
+    <svg class="pix pix-deco pix-float" style="top:22%;right:14%;width:34px;height:22px;color:var(--c-sky);animation-delay:-2s"><use href="#pix-cloud"/></svg>
+    <svg class="pix pix-deco pix-float" style="bottom:26%;left:18%;width:18px;height:18px;color:var(--c-pink);animation-delay:-1s"><use href="#pix-heart"/></svg>
+    <svg class="pix pix-deco pix-float" style="bottom:32%;right:10%;width:22px;height:22px;color:var(--c-grape);animation-delay:-3s"><use href="#pix-star"/></svg>
+    <div class="intro-ui">
+      <span class="kicker">NJAU E-Sports Club</span>
+      <h1 class="intro-title">NJAU 电竞社</h1>
+      <p class="intro-hint" id="introHint">玄鸟粒子汇聚中… 移动鼠标感受视差</p>
+      <div class="intro-action">
+      <button class="intro-skip" id="skipBtn" type="button">跳过动画</button>
+      <button class="btn btn-primary btn-lg intro-enter" id="enterBtn" type="button">
+        进入首页 <span class="btn-arrow">&#9654;</span>
+      </button>
+      </div>
+    </div>
+    <noscript><p style="text-align:center;padding:20px">本页需要启用 JavaScript 以展示粒子开场与交互动效。</p></noscript>
+  </div>
+
+  <!-- ============ 导航 ============ -->
+  <header class="nav">
+    <a class="nav-brand" href="#opening">
+      <img class="nav-logo" src="assets/logo-nav.jpg" alt="">
+      NJAU 电竞社
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#opening">首页</a>
+      <a href="#about">关于</a>
+      <a href="#games">分部</a>
+      <a href="#events">活动</a>
+      <a href="#honors">荣誉</a>
+      <a href="#apply">招新</a>
+      <a href="#contact">联系</a>
+    </nav>
+    <a class="btn btn-primary btn-sm nav-cta" href="#apply">报名加入</a>
+    <button class="nav-burger" id="navBurger" type="button" aria-label="菜单" aria-expanded="false" aria-controls="navLinks">
+      <svg class="pix" viewBox="0 0 8 8"><use href="#pix-burger"/></svg>
+    </button>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ 1b. 首屏横幅 ============ -->
+    <section id="opening" class="section section-opening">
+      <svg class="pix pix-deco pix-float" style="top:18%;left:8%;width:30px;height:30px;color:var(--c-lemon)"><use href="#pix-star"/></svg>
+      <svg class="pix pix-deco pix-float" style="top:30%;right:9%;width:44px;height:26px;color:var(--c-sky);animation-delay:-2.4s"><use href="#pix-cloud"/></svg>
+      <svg class="pix pix-deco pix-float" style="bottom:20%;left:14%;width:22px;height:18px;color:var(--c-pink);animation-delay:-1.2s"><use href="#pix-heart"/></svg>
+      <div class="container opening-inner">
+        <h1 class="opening-title reveal" style="--d:.08s">
+          把爱玩的人聚起来，<br><span class="grad-text">打得漂亮，赢得开心</span>
+        </h1>
+        <p class="opening-tag reveal" style="--d:.16s">
+          NJAU 电竞社 · 学生电竞共同体：八大游戏分部、全年赛事与活动，等你上车。
+        </p>
+        <div class="opening-actions reveal" style="--d:.24s">
+          <button class="btn btn-ghost" id="replayBtn" type="button">重播开场动画</button>
+          <a class="btn btn-primary" href="#apply">报名加入 <span class="btn-arrow">&#9654;</span></a>
+        </div>
+        <div class="scroll-hint reveal" style="--d:.32s">
+          SCROLL
+          <span class="arrow"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 2. 关于社团 ============ -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">About Us</span>
+          <h2>关于社团</h2>
+          <p class="lead">在南农，找到一起上场的队友。</p>
+          <div class="pixel-tape"></div>
+        </div>
+        <div class="about-grid">
+          <div class="card about-text reveal">
+            <p>NJAU 电竞社由热爱游戏的南农同学组成。八个游戏分部汇聚不同玩法，
+              从校队训练、组队开黑到观赛交流，都有人与你并肩。</p>
+            <p>这里也欢迎策划赛事、解说比赛、剪辑视频和创作像素画的同学。
+              无论你擅长哪个位置，都能找到参与社团的方式。</p>
+            <div class="about-tags">
+              <span class="chip">赛事组织</span>
+              <span class="chip">校队训练</span>
+              <span class="chip">内容创作</span>
+              <span class="chip">观赛派对</span>
+            </div>
+          </div>
+          <div>
+            <div class="stats-grid">
+              <div class="stat reveal"><div class="stat-num" data-count="128" data-suffix="+">0</div><div class="stat-label">注册社员</div></div>
+              <div class="stat reveal" style="--d:.08s"><div class="stat-num" data-count="8" data-suffix="">0</div><div class="stat-label">游戏分部</div></div>
+              <div class="stat reveal" style="--d:.16s"><div class="stat-num" data-count="10" data-suffix="">0</div><div class="stat-label">活动举办</div></div>
+              <div class="stat reveal" style="--d:.24s"><div class="stat-num" data-count="6" data-suffix="">0</div><div class="stat-label">奖杯奖牌</div></div>
+            </div>
+          </div>
+        </div>
+        <article class="bloom-card" id="club-bloom" aria-labelledby="bloom-title">
+          <div class="bloom-copy">
+            <span class="kicker">A little bloom, a new beginning</span>
+            <h3 id="bloom-title">花开，队友就位。</h3>
+            <p>点开这束花，和下一位队友相遇。</p>
+            <span class="bloom-group">南农电竞社招新群 <span>912557320</span></span>
+          </div>
+          <div class="bloom-stage" id="bloom-stage" role="button" tabindex="0" aria-label="展开花束，显示社团群二维码" aria-pressed="false">
+            <img class="bloom-fallback" src="assets/bloom/group-scan.png" alt="南农电竞社招新群二维码" width="656" height="656">
+            <span class="bloom-loading">正在准备一束花…</span>
+          </div>
+          <div class="bloom-controls">
+            <p id="bloom-status" aria-live="polite">轻点花束，让相遇绽放</p>
+            <div class="bloom-actions">
+              <button class="btn btn-primary" id="bloom-toggle" type="button" disabled>展开花束</button>
+              <button class="btn btn-ghost" id="bloom-original" type="button">查看二维码</button>
+            </div>
+            <small>手机扫码加入 · 也可以查看大图后长按识别</small>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ 3. 游戏分部（7 个，JS 渲染） ============ -->
+    <section id="games" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Divisions</span>
+          <h2>游戏分部</h2>
+          <p class="lead">八大分部，每个分部单独展示。点击“加入分部”查看加群方式。</p>
+          <div class="pixel-tape"></div>
+        </div>
+        <div class="games-grid" id="gamesGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============ 4. 活动时间轴入口 ============ -->
+    <section id="events" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Events</span>
+          <h2>活动时光</h2>
+          <p class="lead">下一场，一起上场。上一场，值得回看。</p>
+          <div class="pixel-tape"></div>
+        </div>
+        <div class="activities-doors">
+          <a class="activity-door activity-door--current reveal" href="activities.html?view=current">
+            <div><span class="activity-door__eyebrow">NEXT CHAPTER / 当下</span><h3>当期活动</h3><p>新的故事，等你一起写。</p><span class="activity-door__range">2026.09 起</span></div>
+            <span class="activity-door__arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="activity-door activity-door--history reveal" href="activities.html?view=history">
+            <div><span class="activity-door__eyebrow">OUR ARCHIVE / 回望</span><h3>历史活动</h3><p>灯光亮起，那些并肩的日子再次清晰。</p><span class="activity-door__range">2024.09 — 2026.06</span></div>
+            <span class="activity-door__arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5. 比赛战报 / 荣誉墙 ============ -->
+    <section id="honors" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Honors</span>
+          <h2>战报与荣誉墙</h2>
+          <p class="lead">记录南农电竞的赛场瞬间，过往战绩与新赛季战报持续征集中。</p>
+          <div class="pixel-tape"></div>
+        </div>
+        <div class="honors-grid">
+          <article class="card card-hover honor-card reveal" data-detail="出征第三届京东MALL校园Major，经过线上多轮角逐与线下总决赛强强对抗，斩获南京赛区亚军！展现了南农CS2战队强悍的竞技韧性与关键局战术协同。">
+            <div class="honor-media" role="button" tabindex="0" aria-label="查看京东MALL第三届CS2校园Major亚军大图">
+              <img src="assets/honors/jd-cs2-major.jpg" alt="京东MALL 第三届 CS2 校园Major 亚军颁奖现场" loading="eager" decoding="async">
+            </div>
+            <svg class="pix" viewBox="0 0 8 8"><use href="#pix-trophy"/></svg>
+            <h3>京东MALL CS2 校园Major</h3>
+            <p>突破重围强强对决，斩获第三届京东MALL校园Major南京赛区亚军！</p>
+            <span class="chip">CS2</span>
+          </article>
+
+          <article class="card card-hover honor-card reveal" style="--d:.08s" data-detail="斩获 PEGT 高校电竞联赛南京站 CS2 亚军！同年持续出征多项重点高校赛事：荣获 2026 卓威春季高校赛全国四强、秋季卓威高校赛亚军（南京赛点），以及极限之地公开赛南京六强，赛场战绩斐然。">
+            <div class="honor-media" role="button" tabindex="0" aria-label="查看PEGT高校电竞联赛CS2南京站亚军大图">
+              <img src="assets/honors/pegt-cs2-runnerup.jpg" alt="PEGT 高校电竞联赛南京站 CS2 亚军领奖" loading="eager" decoding="async">
+            </div>
+            <svg class="pix" viewBox="0 0 8 8"><use href="#pix-trophy"/></svg>
+            <h3>PEGT 高校联赛 · CS2 亚军</h3>
+            <p>斩获南京站亚军，同年荣获卓威高校赛亚军、极限之地六强等战绩。</p>
+            <span class="chip">CS2</span>
+          </article>
+
+          <article class="card card-hover honor-card reveal" style="--d:.16s" data-detail="2026 PEGT 全国高校电竞联赛南京站线下总决赛，南农无畏契约战队高光出战，于保利大舞台敢打敢拼，勇夺无畏契约项目南京站总决赛亚军！南农双雄并肩闪耀赛场。">
+            <div class="honor-media" role="button" tabindex="0" aria-label="查看PEGT高校电竞联赛瓦罗兰特南京站亚军大图">
+              <img src="assets/honors/pegt-val-runnerup.jpg" alt="PEGT 高校电竞联赛南京站瓦罗兰特亚军舞台合影" loading="eager" decoding="async">
+            </div>
+            <svg class="pix" viewBox="0 0 8 8"><use href="#pix-trophy"/></svg>
+            <h3>PEGT 高校联赛 · 瓦罗兰特亚军</h3>
+            <p>大舞台敢打敢拼，勇夺 2026 PEGT 无畏契约项目南京站总决赛亚军！</p>
+            <span class="chip">瓦罗兰特</span>
+          </article>
+
+          <article class="card card-hover honor-card reveal" style="--d:.24s" data-detail="出征 2026 年度闪迪高校开黑挑战赛（Sandisk Gamer Day），在激烈的全国高校队伍对抗中稳定发挥、突破重围，斩获高校组季军荣誉！">
+            <div class="honor-media" role="button" tabindex="0" aria-label="查看闪迪高校开黑挑战赛季军大图">
+              <img src="assets/honors/sandisk-val-third.jpg" alt="闪迪高校开黑挑战赛全国季军领奖" loading="eager" decoding="async">
+            </div>
+            <svg class="pix" viewBox="0 0 8 8"><use href="#pix-trophy"/></svg>
+            <h3>闪迪高校开黑挑战赛 · 季军</h3>
+            <p>出征 Sandisk Gamer Day，在激烈的全国高校队伍对抗中突破斩获季军！</p>
+            <span class="chip">瓦罗兰特</span>
+          </article>
+        </div>
+
+        <div class="card honors-banner reveal" style="--d:.32s">
+          <div class="honors-banner__main">
+            <svg class="pix honors-banner__trophy" viewBox="0 0 8 8"><use href="#pix-trophy"/></svg>
+            <div>
+              <div class="honors-banner__title">历届赛事战报与高光持续征集中</div>
+              <p class="honors-banner__desc">欢迎各分部战队与社员投递校际对抗高光、参赛证明与获奖记录，共同丰富南农电竞战报档案。</p>
+            </div>
+          </div>
+          <a class="btn btn-ghost btn-sm" href="#apply">投递战报与入社 ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 6. 招新报名 ============ -->
+    <section id="apply" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Join Us</span>
+          <h2>招新报名</h2>
+          <p class="lead">只收集必要联络信息。提交后请加入招新群，联系负责人确认入社。</p>
+          <div class="pixel-tape"></div>
+        </div>
+        <form class="card apply-card reveal" id="applyForm" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="fName">姓名 <span class="req">*</span></label>
+              <input class="input" id="fName" name="name" type="text" placeholder="怎么称呼你？" autocomplete="name" maxlength="50" required aria-describedby="errName">
+              <span class="field-error" id="errName"></span>
+            </div>
+            <div class="field">
+              <label for="fContact">微信 / QQ <span class="req">*</span></label>
+              <input class="input" id="fContact" name="contact" type="text" placeholder="方便拉群的联系方式" maxlength="100" required aria-describedby="errContact">
+              <span class="field-error" id="errContact"></span>
+            </div>
+            <div class="field form-full">
+              <label for="fMajor">年级 / 专业</label>
+              <input class="input" id="fMajor" name="major" type="text" placeholder="如：2025 级 · 计算机科学与技术" maxlength="100">
+              <span class="field-error"></span>
+            </div>
+            <div class="field form-full">
+              <label>意向游戏分部（可多选）<span class="req">*</span></label>
+              <div class="chip-group" id="applyGames"></div>
+              <span class="field-error" id="errGames"></span>
+            </div>
+            <div class="field form-full">
+              <label for="fIntro">自我介绍（可选）</label>
+              <textarea class="textarea" id="fIntro" name="intro" placeholder="段位 / 位置 / 想说的话，随便聊聊" maxlength="2000"></textarea>
+              <span class="field-error"></span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-lg" type="submit">提交报名 <span class="btn-arrow">&#9654;</span></button>
+          <p class="privacy">
+            <svg class="pix" viewBox="0 0 7 6"><use href="#pix-heart"/></svg>
+            信息仅用于社团招新联络，不对外公开；请同步加入招新 QQ 群完成入社确认。如登记失败，也可直接联系负责人。
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ 7. 联系我们 ============ -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Contact</span>
+          <h2>联系我们</h2>
+          <p class="lead">欢迎加入南农电竞社，入群开黑、日常交流与赛事对接随时欢迎。</p>
+          <div class="pixel-tape"></div>
+        </div>
+        <div class="contact-grid">
+          <div class="card card-hover contact-card reveal">
+            <svg class="pix" viewBox="0 0 8 8"><use href="#pix-qr"/></svg>
+            <h3>社团招新大群</h3>
+            <p class="contact-val">QQ 912557320</p>
+          </div>
+          <div class="card card-hover contact-card reveal" style="--d:.08s">
+            <svg class="pix" viewBox="0 0 7 7"><use href="#pix-star"/></svg>
+            <h3>负责人联系方式</h3>
+            <p class="contact-val">QQ 1727529461</p>
+          </div>
+          <div class="card card-hover contact-card reveal" style="--d:.16s">
+            <svg class="pix" viewBox="0 0 8 6"><use href="#pix-mail"/></svg>
+            <h3>合作与咨询</h3>
+            <p class="contact-val">邮箱：swk233@qq.com</p>
+            <p>校园比赛、网站咨询与活动合作</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>
+      &copy; <span id="year">2026</span> NJAU 电竞社 ·
+      用 <svg class="pix" viewBox="0 0 7 6"><use href="#pix-heart"/></svg> 与活力青制作
+    </p>
+    <p>南京农业大学学生电竞社团 · 非官方学生兴趣组织 · 欢迎广大游戏爱好者交流加入</p>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  
+  
+  <script src="js/data.js?v=20261002-prelaunch"></script>
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "./js/vendor/three160/build/three.module.js",
+      "three/addons/": "./js/vendor/three160/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module" src="js/hero-pointcloud.js"></script>
+  <script src="js/valorant-art.js?v=20260925-feet-edge2"></script>
+  <script src="js/cs2-art.js?v=20260926-voice-v3"></script>
+  <script src="js/wangzhe-art.js?v=20260926-v13"></script>
+  <script src="js/division-sound.js?v=20261001-kindred-v3"></script>
+  <script src="js/division-fx.js?v=20261001-sound-v1"></script>
+  <script src="js/naraka-interactions.js?v=20261001-v1"></script>
+  <script src="js/identityv-interactions.js?v=20261001-camera-v1"></script>
+  <script src="js/overwatch-interactions.js?v=20261001-v1"></script>
+  <script src="js/lol-interactions.js?v=20261001-v1"></script>
+  <script src="js/main.js?v=20261002-honors-v3"></script>
+  <script type="module" src="js/bloom-qr.js?v=20260923-leaf-model-v2"></script>
+  <dialog id="bloom-dialog" class="bloom-dialog" aria-labelledby="bloom-dialog-title">
+    <button type="button" class="bloom-close" aria-label="关闭二维码">×</button>
+    <h3 id="bloom-dialog-title">南农电竞社招新群</h3>
+    <p>群号 912557320 · 长按图片识别</p>
+    <img src="assets/bloom/group-code.png" alt="QQ 原始加群二维码，群号 912557320">
+    <a class="btn btn-primary" href="assets/bloom/group-original.jpg" download="南农电竞社招新群.jpg">保存原始二维码</a>
+  </dialog>
+  <dialog id="division-dialog" class="bloom-dialog division-dialog" aria-labelledby="division-dialog-title" aria-describedby="division-dialog-note">
+    <button type="button" class="bloom-close division-close" aria-label="关闭分部加群窗口">×</button>
+    <h3 id="division-dialog-title">加入分部</h3>
+    <p id="division-dialog-note" class="division-dialog-note"></p>
+    <strong id="division-group-name" class="division-group-name"></strong>
+    <img id="division-group-qr" alt="" hidden>
+    <p id="division-group-number"></p>
+    <div class="division-dialog-actions">
+      <a id="division-qq-link" class="btn btn-primary" target="_blank" rel="noopener noreferrer" hidden>QQ 加群 ↗</a>
+      <button id="division-copy-number" class="btn btn-ghost" type="button" hidden>复制群号</button>
+      <a id="division-save-qr" class="btn btn-ghost" hidden>保存二维码</a>
+    </div>
+  </dialog>
+
+  <dialog id="honor-dialog" class="bloom-dialog honor-dialog" aria-labelledby="honor-dialog-title">
+    <button type="button" class="bloom-close" id="honor-dialog-close" aria-label="关闭原图">×</button>
+    <div class="honor-dialog-head">
+      <h3 id="honor-dialog-title"></h3>
+      <p id="honor-dialog-sub" class="honor-dialog-sub"></p>
+      <p id="honor-dialog-desc" class="honor-dialog-desc"></p>
+    </div>
+    <div class="honor-dialog-img-wrap">
+      <img id="honor-dialog-img" alt="" src="">
+    </div>
+  </dialog>
+</body>
+</html>

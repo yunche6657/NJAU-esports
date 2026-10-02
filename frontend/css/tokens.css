@@ -1,0 +1,82 @@
+/* ==========================================================================
+   NJAU 电竞社 · 设计令牌 (M1)
+   明亮青春 · 糖果活力风：浅色为底 / 活力青主色 / 糖果点缀 / 大圆角 / 像素只做点缀
+   ========================================================================== */
+:root {
+  /* -- 主色 · 活力青 -- */
+  --c-primary: #00c2a8;
+  --c-primary-deep: #009e8a;
+  --c-primary-ink: #067a6c;
+  --c-primary-soft: #d8fff6;
+  --c-sky: #4cc9f0;
+
+  /* -- 糖果点缀色 -- */
+  --c-pink: #ff5d73;
+  --c-orange: #ff9f45;
+  --c-lemon: #ffd166;
+  --c-mint: #06d6a0;
+  --c-grape: #9b8cff;
+  --c-plum: #c77dff;
+
+  /* -- 中性色 -- */
+  --c-ink: #0e3b36;
+  --c-ink-2: #3f635d;
+  --c-muted: #7b9691;
+  --c-line: rgba(14, 59, 54, 0.10);
+  --c-bg: #f4fffb;
+  --c-surface: #ffffff;
+  --c-surface-2: #eafff8;
+
+  /* -- 圆角 -- */
+  --r-sm: 10px;
+  --r-md: 16px;
+  --r-lg: 24px;
+  --r-xl: 32px;
+  --r-pill: 999px;
+
+  /* -- 阴影 -- */
+  --sh-xs: 0 1px 2px rgba(14, 59, 54, 0.05);
+  --sh-sm: 0 4px 14px rgba(14, 59, 54, 0.07);
+  --sh-md: 0 12px 32px rgba(0, 194, 168, 0.16);
+  --sh-lg: 0 24px 64px rgba(0, 158, 138, 0.20);
+
+  /* -- 间距 -- */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+  --sp-9: 96px;
+
+  /* -- 字体 -- */
+  --font-display: "ZCOOL KuaiLe", "Baloo 2", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --font-body: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", system-ui, sans-serif;
+  --font-num: "Baloo 2", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --fs-xs: 12px;
+  --fs-sm: 14px;
+  --fs-md: 16px;
+  --fs-lg: 20px;
+  --fs-xl: 28px;
+  --fs-2xl: 40px;
+  --fs-3xl: 56px;
+
+  /* -- 布局 -- */
+  --nav-h: 68px;
+  --wrap: 1120px;
+
+  /* -- 动效 -- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --t-fast: 0.18s;
+  --t-mid: 0.35s;
+  --t-slow: 0.7s;
+
+  /* -- 层级 -- */
+  --z-nav: 40;
+  --z-progress: 50;
+  --z-intro: 60;
+  --z-toast: 80;
+}

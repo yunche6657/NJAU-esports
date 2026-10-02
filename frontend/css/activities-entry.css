@@ -1,0 +1,26 @@
+/* The two entrances belong to the home page; archive styling stays isolated. */
+.activities-doors { display: grid; gap: 22px; }
+.activity-door { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 255px; padding: 40px 48px; isolation: isolate; overflow: hidden; border-radius: var(--r-xl); transition: transform .3s ease, box-shadow .3s ease; }
+.activity-door:hover { transform: translateY(-3px); box-shadow: 0 14px 38px #0b382b18; }
+.activity-door:focus-visible { outline: 3px solid var(--c-primary); outline-offset: 5px; }
+.activity-door--current { color: #164d45; background: linear-gradient(115deg, #e5faf2, #e0f2ed 60%, #c0e4d6); border: 1px solid #d1e8dc; }
+.activity-door--current::after { content: "2026"; position: absolute; right: 10%; bottom: -50px; font: 800 clamp(120px, 20vw, 240px)/1 var(--font-num); letter-spacing: -.07em; color: #0d685910; z-index: -1; }
+.activity-door--current::before { content: ''; position: absolute; inset: 0; z-index: -2; background: linear-gradient(90deg, #e5faf2f5, #e5faf29c 50%, #e5faf226), url('../assets/activities/main-building-day-v1.webp') center 58% / cover; }
+.activity-door--history { color: #fff6e6; background: #091a31; min-height: 290px; }
+.activity-door--history::before { content: ""; position: absolute; inset: 0; z-index: -2; background: url('../assets/activities/main-building-night.webp') center 52% / cover; transition: transform .7s ease; }
+.activity-door--history::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, #061329e8, #07152a64 55%, #07152a14); }
+.activity-door--history:hover::before { transform: scale(1.025); }
+.activity-door__eyebrow { display: block; margin-bottom: 13px; font: 600 11px/1.5 var(--font-body); letter-spacing: .23em; }
+.activity-door h3 { margin: 0 0 12px; color: inherit; font-family: var(--font-body); font-size: clamp(28px, 3.5vw, 40px); font-weight: 700; letter-spacing: .07em; }
+.activity-door p { margin: 0; font-size: 14px; opacity: .83; }
+.activity-door__range { display: block; margin-top: 23px; font: 600 15px/1.5 var(--font-body); letter-spacing: .1em; }
+.activity-door--history .activity-door__eyebrow, .activity-door--history .activity-door__range { color: #efca81; }
+.activity-door__arrow { flex: 0 0 56px; width: 56px; height: 56px; display: grid; place-items: center; border: 1px solid currentColor; border-radius: 50%; font: 300 28px/1 sans-serif; }
+@media (max-width: 600px) {
+  .activity-door { padding: 28px 25px; min-height: 230px; gap: 12px; border-radius: 24px; }
+  .activity-door--history { min-height: 260px; }
+  .activity-door__arrow { flex-basis: 40px; width: 40px; height: 40px; font-size: 23px; }
+  .activity-door p { font-size: 12px; }
+  .activity-door--history::before { background-position: 53% center; }
+}
+@media (prefers-reduced-motion: reduce) { .activity-door, .activity-door::before { transition: none; } .activity-door:hover, .activity-door--history:hover::before { transform: none; } }
