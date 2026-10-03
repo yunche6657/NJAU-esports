@@ -66,10 +66,10 @@
     bottom: 0;
     transform: translate(-50%, 25%);
   }
-  .game-card--delta .game-character-slot:nth-child(2) .game-character-art { transform: scale(.92); }
+  .game-card--delta .game-character-slot:nth-child(2) .game-character-art { transform: scale(.75); }
   .game-card--delta .game-character-slot:nth-child(3) .game-character-art { transform: scale(1.08); }
 
-  .game-card--naraka .game-art-stage { grid-template-columns: 1fr 1.25fr 1fr; }
+  .game-card--naraka .game-art-stage { grid-template-columns: .9fr 1.25fr 1.085fr; }
   .game-card--naraka .game-character-slot:nth-child(1) .game-character-art,
   .game-card--naraka .game-character-slot:nth-child(2) .game-character-art,
   .game-card--naraka .game-character-slot:nth-child(3) .game-character-art { transform: none; }
@@ -87,9 +87,15 @@
   .game-card--lol .game-character-slot:nth-child(2) .game-character-art,
   .game-card--lol .game-character-slot:nth-child(3) .game-character-art {
     width: 100%;
-    height: 100%;
-    transform: none;
+    height: auto;
+    max-height: 100%;
+    /* Percentage follows the rendered image height, including on narrow screens. */
+    transform: translateY(var(--lol-foot-inset));
   }
+  /* Visible feet in the 1024px PNGs; near-transparent export residue is excluded. */
+  .game-card--lol .game-character-slot:nth-child(1) { --lol-foot-inset: 14.4%; }
+  .game-card--lol .game-character-slot:nth-child(2) { --lol-foot-inset: 9.4%; }
+  .game-card--lol .game-character-slot:nth-child(3) { --lol-foot-inset: 9.6%; }
 }
 @media (prefers-reduced-motion: reduce) {
   .game-card .division-fx-slot,
