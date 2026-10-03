@@ -1,3 +1,12 @@
+/* Suppress native touch rectangles on all division artwork, including nested sprites. */
+.game-card :is(.game-character-slot, .valorant-character, .wz-character),
+.game-card :is(.game-character-slot, .valorant-character, .wz-character) * {
+  -webkit-tap-highlight-color: transparent;
+}
+.game-card :is(.game-character-slot, .valorant-character, .wz-character):focus:not(:focus-visible) {
+  outline: none;
+}
+
 /* Interactive controls retain the original grid and artwork dimensions. */
 .game-card .game-character-slot.division-fx-slot {
   position: relative;
