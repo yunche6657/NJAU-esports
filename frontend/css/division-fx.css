@@ -40,30 +40,55 @@
 }
 .game-card .is-fx-active > .division-fx-layer,
 .game-card .is-fx-hint > .division-fx-layer { visibility: visible; }
-/* Keep breathing room between wide artwork throughout the mobile layout. */
+/* Mobile rosters use the card width rather than desktop sprite dimensions. */
 @media (max-width: 720px) {
-  .game-card--naraka .game-art-stage,
-  .game-card--overwatch .game-art-stage { gap: 16px; }
-  .game-card--naraka .game-character-slot:nth-child(1) .game-character-art {
-    transform: scale(.78);
+  .game-card:not(.game-card--cs2):not(.game-card--valorant) {
+    --roster-height: clamp(112px, 32vw, 176px);
+    margin-top: calc(var(--roster-height) + 8px);
   }
-  .game-card--naraka .game-character-slot:nth-child(2) .game-character-art {
-    transform: scale(1.12);
+  .game-card:not(.game-card--cs2):not(.game-card--valorant) .game-art-stage {
+    min-height: var(--roster-height);
+    margin-top: calc(-1 * var(--roster-height) - 25px);
+    gap: 8px;
   }
-  .game-card--naraka .game-character-slot:nth-child(3) .game-character-art {
-    transform: scale(.88);
+  .game-card:not(.game-card--cs2):not(.game-card--valorant) .game-character-slot,
+  .game-card--wangzhe .wz-character { height: var(--roster-height); }
+
+  .game-card--wangzhe .game-art-stage { grid-template-columns: .95fr 1.1fr .95fr; }
+  .game-card--wangzhe .wz-character:first-child { transform: scale(.9); transform-origin: center bottom; }
+  .game-card--valorant .valorant-character--cat {
+    transform: scale(1.08); transform-origin: center bottom;
   }
-  .game-card--overwatch.has-division-fx .game-character-slot:nth-child(1) .game-character-art {
-    width: 116%;
-    transform: translateY(1px);
+
+  .game-card--delta .delta-character-art {
+    width: 156%;
+    height: auto;
+    bottom: 0;
+    transform: translate(-50%, 25%);
   }
-  .game-card--overwatch.has-division-fx .game-character-slot:nth-child(2) .game-character-art {
-    width: 94%;
-    transform: translateY(1px);
-  }
+  .game-card--delta .game-character-slot:nth-child(2) .game-character-art { transform: scale(.92); }
+  .game-card--delta .game-character-slot:nth-child(3) .game-character-art { transform: scale(1.08); }
+
+  .game-card--naraka .game-art-stage { grid-template-columns: 1fr 1.25fr 1fr; }
+  .game-card--naraka .game-character-slot:nth-child(1) .game-character-art,
+  .game-card--naraka .game-character-slot:nth-child(2) .game-character-art,
+  .game-card--naraka .game-character-slot:nth-child(3) .game-character-art { transform: none; }
+
+  .game-card--identityv .game-character-slot:nth-child(3) .game-character-art { transform: scale(1.06); }
+
+  .game-card--overwatch .game-art-stage { grid-template-columns: 1.35fr 1.1fr .85fr; gap: 6px; margin-left: -12px; margin-right: -12px; }
+  .game-card--overwatch.has-division-fx .game-character-slot:nth-child(1) .game-character-art,
+  .game-card--overwatch.has-division-fx .game-character-slot:nth-child(2) .game-character-art,
   .game-card--overwatch.has-division-fx .game-character-slot:nth-child(3) .game-character-art {
-    width: 86%;
-    transform: translateY(1px);
+    width: 100%;
+    transform: none;
+  }
+  .game-card--lol .game-character-slot:nth-child(1) .game-character-art,
+  .game-card--lol .game-character-slot:nth-child(2) .game-character-art,
+  .game-card--lol .game-character-slot:nth-child(3) .game-character-art {
+    width: 100%;
+    height: 100%;
+    transform: none;
   }
 }
 @media (prefers-reduced-motion: reduce) {

@@ -592,6 +592,10 @@
   .game-card { margin-top: 180px; }
   .game-art-stage { min-height: 188px; margin-top: -213px; gap: 8px; padding: 0 0 8px; }
   .game-character-slot { height: 188px; padding: 10px 4px; }
+  .game-card--cs2 .game-character-slot:nth-child(2) .game-character-art {
+    transform: scale(0.72);
+    transform-origin: center bottom;
+  }
   .game-art-stage--delta { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; padding: 0; }
   .delta-character-slot { width: 100%; min-width: 0; flex-basis: auto; }
   .delta-character-art { width: 210px; height: 210px; bottom: -53px; }
